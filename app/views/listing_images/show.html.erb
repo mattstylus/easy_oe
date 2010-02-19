@@ -1,0 +1,18 @@
+<p>
+  <b>Listing:</b>
+  <%=h @listing_image.listing_id %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%=h @listing_image.image_id %>
+</p>
+
+<p>
+  <b>Enabled:</b>
+  <%=h @listing_image.enabled %>
+</p>
+
+
+<%= link_to 'Edit', edit_listing_image_path(@listing_image) %> |
+<%= link_to 'Back', listing_images_path %>

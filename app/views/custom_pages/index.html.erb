@@ -1,0 +1,24 @@
+<h1>Listing custom_pages</h1>
+
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Title</th>
+    <th>Sub title</th>
+  </tr>
+
+<% @custom_pages.each do |custom_page| %>
+  <tr>
+    <td><%=h custom_page.category_id %></td>
+    <td><%=h custom_page.title %></td>
+    <td><%=h custom_page.sub_title %></td>
+    <td><%= link_to 'Show', custom_page %></td>
+    <td><%= link_to 'Edit', edit_custom_page_path(custom_page) %></td>
+    <td><%= link_to 'Destroy', custom_page, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New custom_page', new_custom_page_path %>

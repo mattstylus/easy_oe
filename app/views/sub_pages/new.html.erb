@@ -1,0 +1,43 @@
+<h1>New sub_page</h1>
+
+<% form_for(@sub_page) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :page_id %><br />
+    <%= f.text_field :page_id %>
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </p>
+  <p>
+    <%= f.label :order %><br />
+    <%= f.text_field :order %>
+  </p>
+  <p>
+    <%= f.label :location_title %><br />
+    <%= f.text_field :location_title %>
+  </p>
+  <p>
+    <%= f.label :location_city %><br />
+    <%= f.text_field :location_city %>
+  </p>
+  <p>
+    <%= f.label :location_area %><br />
+    <%= f.text_field :location_area %>
+  </p>
+  <p>
+    <%= f.label :location_postcode %><br />
+    <%= f.text_field :location_postcode %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', sub_pages_path %>

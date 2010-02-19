@@ -1,0 +1,34 @@
+<h1>Listing categories</h1>
+
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Sub Category</th>
+	<th>URL</th>
+	<th>Types</th>
+  </tr>
+
+<% @categories.each do |category| %>
+  <tr>
+    <td><%=h category.description %></td>
+	<td>
+		<% category.categories.each do |sub_cat| %>
+		<p><%=h sub_cat.description %></p>
+		<% end %>
+	</td>
+	<td><%=h category.url %></td>
+	<td>
+		<% category.types.each do |type| %>
+		<p><%=h type.description %></p>
+		<% end %>
+	</td>
+    <td><%= link_to 'Show', category %></td>
+    <td><%= link_to 'Edit', edit_category_path(category) %></td>
+    <td><%= link_to 'Destroy', category, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New category', new_category_path %>

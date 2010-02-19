@@ -1,0 +1,24 @@
+<h1>Editing custom_page</h1>
+
+<% form_for(@custom_page) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :category_id %><br />
+    <%= f.text_field :category_id %>
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :sub_title %><br />
+    <%= f.text_field :sub_title %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @custom_page %> |
+<%= link_to 'Back', custom_pages_path %>

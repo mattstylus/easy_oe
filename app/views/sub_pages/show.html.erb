@@ -1,0 +1,43 @@
+<p>
+  <b>Page:</b>
+  <%=h @sub_page.page_id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @sub_page.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @sub_page.content %>
+</p>
+
+<p>
+  <b>Order:</b>
+  <%=h @sub_page.order %>
+</p>
+
+<p>
+  <b>Location title:</b>
+  <%=h @sub_page.location_title %>
+</p>
+
+<p>
+  <b>Location city:</b>
+  <%=h @sub_page.location_city %>
+</p>
+
+<p>
+  <b>Location area:</b>
+  <%=h @sub_page.location_area %>
+</p>
+
+<p>
+  <b>Location postcode:</b>
+  <%=h @sub_page.location_postcode %>
+</p>
+
+
+<%= link_to 'Edit', edit_sub_page_path(@sub_page) %> |
+<%= link_to 'Back', sub_pages_path %>

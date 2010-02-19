@@ -1,0 +1,73 @@
+<p>
+  <b>Category:</b>
+  <%=h @listing.category_id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @listing.title %>
+</p>
+
+<p>
+  <b>Sub title:</b>
+  <%=h @listing.sub_title %>
+</p>
+
+<p>
+  <b>Location city:</b>
+  <%=h @listing.location_city %>
+</p>
+
+<p>
+  <b>Location area:</b>
+  <%=h @listing.location_area %>
+</p>
+
+<p>
+  <b>Location postcode:</b>
+  <%=h @listing.location_postcode %>
+</p>
+
+<p>
+  <b>Event date:</b>
+  <%=h @listing.event_date %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @listing.type_id %>
+</p>
+
+<p>
+  <b>Contact email address:</b>
+  <%=h @listing.contact_email_address %>
+</p>
+
+<p>
+  <b>Contact name:</b>
+  <%=h @listing.contact_name %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @listing.user_id %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @listing.content %>
+</p>
+
+<p>
+  <b>Reference:</b>
+  <%=h @listing.reference %>
+</p>
+
+<p>
+  <b>Contact number:</b>
+  <%=h @listing.contact_number %>
+</p>
+
+
+<%= link_to 'Edit', edit_listing_path(@listing) %> |
+<%= link_to 'Back', listings_path %>

@@ -1,0 +1,46 @@
+<h1>Listing listings</h1>
+
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Title</th>
+    <th>Sub title</th>
+    <th>Location city</th>
+    <th>Location area</th>
+    <th>Location postcode</th>
+    <th>Event date</th>
+    <th>Type</th>
+    <th>Contact email address</th>
+    <th>Contact name</th>
+    <th>User</th>
+    <th>Content</th>
+    <th>Reference</th>
+    <th>Contact number</th>
+  </tr>
+
+<% @listings.each do |listing| %>
+  <tr>
+    <td><%=h listing.category_id %></td>
+    <td><%=h listing.title %></td>
+    <td><%=h listing.sub_title %></td>
+    <td><%=h listing.location_city %></td>
+    <td><%=h listing.location_area %></td>
+    <td><%=h listing.location_postcode %></td>
+    <td><%=h listing.event_date %></td>
+    <td><%=h listing.type_id %></td>
+    <td><%=h listing.contact_email_address %></td>
+    <td><%=h listing.contact_name %></td>
+    <td><%=h listing.user_id %></td>
+    <td><%=h listing.content %></td>
+    <td><%=h listing.reference %></td>
+    <td><%=h listing.contact_number %></td>
+    <td><%= link_to 'Show', listing %></td>
+    <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
+    <td><%= link_to 'Destroy', listing, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New listing', new_listing_path %>

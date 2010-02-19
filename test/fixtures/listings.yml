@@ -1,0 +1,80 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+<%
+    require 'csv'
+    first_names = Array.new(["Mark", "Alan", "Martin", "Alec", "Michael", "Alfred", "Mycroft", "Alistair", "Neville", "Andrew", "Nicholas", "Anthony", "Tony", "Nigel", "Augustus", "Patrick", "Barrington", "Paul", "Basil", "Peter", "Benjamin", "Philip", "Charles", "Ralph", "Christien", "Ray", "Christopher", "Richard", "Clive", "Robert", "Colin", "Roger", "Culverton", "Rowland", "Daniel", "Danny", "Rupert", "David", "Dave", "Samuel", "Sam", "Derek", "Simon", "Edmund", "Stephan", "Edward", "Ted", "Stephen", "Elmer", "Steven", "Eric", "Stratford", "Frank", "Stuart", "Garry", "Terrence", "Terry", "Thomas", "Tom", "George", "Timothy", "Gordon", "Trevor", "Graham", "Victor", "Gregory", "Greg", "Harrold", "Harry", "Warren", "Horatio", "William", "Howard", "Willoughby", "Hugh", "Humphrey", "Ian", "Jack", "James", "Jeff", "Jeremy", "John", "Jonathan", "Jude", "Julian", "Keith", "Kenneth", "Kenny", "Lee", "Lesley", "Malcolm", "Abigail", "Karen", "Adelaide", "Kay", "Adrian", "Laurie", "Agnes", "Lesley", "Aileen", "Lillie", "Alison", "Linda", "Ann", "Lisa", "Anna", "Louise", "Annie", "Lucinda", "Lucy", "Barbara", "Lyn", "Beatrice", "Margaret", "Belinda", "Marianne", "Caroline", "Marilla", "Carolyn", "Marina", "Catherine", "Mary", "Charlotte", "Miranda", "Cheryl", "Monica", "Christine", "Natalie", "Daphne", "Olivia", "Diana", "Pamela", "Dolores", "Patricia", "Donna", "Phyllis", "Doreen", "Polly", "Dorothy", "Rachel", "Eileen", "Rebecca", "Elizabeth", "Rosalie", "Elspeth", "Rosalind", "Emily", "Sally", "Emma", "Sarah", "Esther", "Serena", "Fiona", "Shirley", "Francesca", "Sophia", "Gabrielle", "Sophie", "Gail", "Susan", "Sue", "Gwen", "Susannah", "Harriet", "Valerie", "Heather", "Vena", "Helena", "Helen", "Winnie", "Henrietta", "Zoe"])
+    last_names = Array.new(["Aldred", "Cable", "Dowding", "Aldwinckle", "Calvert", "Doyle", "Alexander", "Campbell", "Drury", "Anderson", "Capaldi", "Ducker", "Anholt", "Carnac", "Duncan", "Anton", "Carter", "Durer", "Atkins", "Casey", "Dyer", "Averill", "Challenor", "Eaton", "Avery", "Channon", "Edland", "Bailey", "Charlton", "Edwards", "Barrett", "Childs", "Elliott", "Barter", "Chissick", "Farr", "Bartholomew", "Clarke", "Faulkner", "Bartlett", "Clayton", "Finch", "Bean", "Coates", "Finlay", "Beavan", "Collard", "Fleming", "Beechcroft", "Cook", "Flynn", "Bell", "Cooke", "Fogg", "Benfield", "Cooney", "Ford", "Benson", "Coppleman", "Forrestal", "Berry", "Corbett", "Forster", "Bertrand", "Cork", "Fox", "Bishop", "Cossey", "Fraser", "Blackwell", "Coulson", "Freeman", "Bleasdale", "Coulter", "Gabriel", "Bloom", "Courtenay", "Garwood", "Bodger", "Cowburn", "Gecks", "Bonham", "Cox", "Gedgrave", "Bonneville", "Coyle", "Gee", "Booth", "Crichlow", "George", "Bowen", "Crompton", "Gibson", "Bowles", "Crosby", "Gladwell", "Bowyer", "Crutcher", "Gogan", "Boydell", "Crystal", "Goody", "Brackenbury", "Curtis", "Gordan", "Bradford", "Damant", "Gowars", "Bradley", "Dangerfield", "Grace", "Brady", "Davies", "Granger", "Bramley", "Davis", "Gravelle", "Brett", "Davison", "Graves", "Briers", "Dean", "Gray", "Briscoe", "Dehn", "Green", "Brisdon", "Devoy", "Gregory", "Broderick", "Diamond", "Griffith", "Brookes", "Dixon", "Guard", "Brown", "Dobson", "Haigh", "Bruce", "Dodds", "Haley", "Buckley", "Donoghue", "Hallows", "Burt", "Dorking", "Hardwicke", "Byron", "Doubleday", "Hardy"])
+    titles = Array.new()
+    filename = "#{RAILS_ROOT}/test/titles_job.csv"
+    CSV.open("test/titles_job.csv", 'r') do |row|
+        titles.push(row)
+    end
+    CSV.open("test/titles_events.csv", 'r') do |row|
+        titles.push(row)
+    end
+    CSV.open("test/titles_travel.csv", 'r') do |row|
+        titles.push(row)
+    end
+    
+    locations = Array.new()
+    CSV.open("test/locations.csv", 'r') do |row|
+        locations.push(row)
+    end
+    
+    content = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus 
+    malesuada, tellus et tempus tincidunt, nibh neque ultrices tortor, vel 
+    venenatis sapien risus eu nisl. Curabitur mollis suscipit convallis. 
+    Nulla vel lorem quis metus sodales imperdiet. Fusce non commodo 
+    justo. Integer leo urna, blandit eget bibendum non, consectetur at 
+    urna. Pellentesque semper pellentesque mi, eu ultricies est semper 
+    eget. Vestibulum leo sapien, rhoncus ut pretium a, blandit ut est. 
+    Sed blandit rutrum rutrum. Sed tincidunt orci nec metus rutrum ut 
+    sodales lectus congue. Nunc vitae aliquet augue. Phasellus elit nisl, 
+    venenatis non dictum vel, faucibus nec est. Mauris fermentum est et 
+    nibh dignissim elementum. Nam ultrices, sapien ac tincidunt congue, 
+    risus neque euismod massa, at porttitor lorem eros eget nibh. 
+    Curabitur et diam leo. Phasellus eget massa sed nulla varius 
+    bibendum tempus in massa. Ut vitae eros eget urna blandit 
+    interdum.</p>
+
+    <p>Nulla vel lorem quis metus sodales imperdiet. Fusce non commodo 
+    justo. Integer leo urna, blandit eget bibendum non, consectetur at 
+    urna. Pellentesque semper pellentesque mi, eu ultricies est semper 
+    eget. Vestibulum leo sapien, rhoncus ut pretium a, blandit ut est. 
+    Sed blandit rutrum rutrum. Sed tincidunt orci nec metus rutrum ut 
+    sodales lectus congue. Nunc vitae aliquet augue. Phasellus elit nisl, 
+    venenatis non dictum vel, faucibus nec est. Mauris fermentum est et 
+    nibh dignissim elementum. Nam ultrices, sapien ac tincidunt congue, 
+    risus neque euismod massa, at porttitor lorem eros eget nibh.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus 
+    malesuada, tellus et tempus tincidunt, nibh neque ultrices tortor, vel 
+    venenatis sapien risus eu nisl. Curabitur mollis suscipit convallis. 
+    Nulla vel lorem quis metus sodales imperdiet. Fusce non commodo 
+    justo. Integer leo urna, blandit eget bibendum non, consectetur at 
+    urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+%>
+
+<% for i in 1..1000 %>
+<% location = locations[rand(locations.length)]
+    postcode = Array.new(location.split(','))
+    temp = postcode.length-2
+    postcode = postcode[temp]
+%>
+listing_<%= i %>:
+  category_id: <%= 1 + rand(8) %>
+  title: <%=titles[rand(titles.length)]%>
+  sub_title: MyString
+  location_city: <%="#{location.split(', ')[location.split(', ').length-2]}"%>
+  location_area: <%=location.split(', ' + location.split(',')[location.split(',').length-2].to_s.strip + ', ' + location.split(',')[location.split(',').length-1].to_s.strip)[0]%>
+  location_postcode: <%= postcode %>
+  event_date: <%= rand(10).days.ago.to_s(:db) %>
+  created_at: <%= rand(100).days.ago.to_s(:db) %>
+  type_id: <%= 1+rand(19) %>
+  contact_email_address: "contact@easyoe.com"
+  contact_name: <%=first_names[rand(first_names.length)]%> <%=last_names[rand(last_names.length)] %>
+  user_id: 1
+  content: <%= content %>
+  reference: <%= "eoe " + rand(1000000000000).to_s %>
+  contact_number: <%= "(07#{2+rand(7)})-#{rand(10)}#{rand(10)}#{rand(10)}#{rand(10)}#{rand(10)}#{rand(10)}#{rand(10)}" %>
+
+<% end %>

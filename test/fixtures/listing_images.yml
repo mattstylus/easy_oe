@@ -1,0 +1,34 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+<% 
+    images = Image.all
+    listings = Listing.all
+%>
+
+<%  for i in 0..(listings.length-1) %>
+    <% for k in 0..3 %>
+        <% image_index = rand(images.length).divmod(3)[0]*3 %>
+listing_image_<%= i %>_<%= k %>_1:
+  id : <%= (12*i)+(3*k)+1 %>
+  listing_id: <%= listings[i].id %>
+  image_id: <%= images[image_index] %>
+  path: <%= images[image_index].public_filename() %>
+  size: "full"
+  enabled: true
+  
+listing_image_<%= i %>_<%= k %>_2:
+    id: <%= (12*i)+(3*k)+2 %>
+    listing_id: <%= listings[i].id %>
+    image_id: <%= images[image_index+1] %>
+    path: <%= images[image_index+1].public_filename() %>
+    size: "medium"
+    enabled: true
+    
+listing_image_<%= i %>_<%= k %>_3:
+  id: <%= (12*i)+(3*k)+3 %>    
+  listing_id: <%= listings[i].id %>
+  image_id: <%= images[image_index+2] %>
+  path: <%= images[image_index+2].public_filename() %>
+  size: "small"
+  enabled: true
+  <% end %>
+<% end %>

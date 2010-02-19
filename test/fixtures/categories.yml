@@ -1,0 +1,71 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+# one:
+#   column: value
+#
+# two:
+#   column: value
+
+category_1:
+    id: 1
+    parent_id: 
+    description: "Events"
+    title: "Events"
+    url: "events"
+    order: 2
+    
+category_2:
+    id: 2
+    parent_id: 
+    description: "Jobs"
+    title: "Jobs"
+    url: "jobs"
+    order: 4
+    
+category_3:
+    id: 3
+    parent_id: 
+    description: "Services"
+    title: "Services"
+    url: "services"
+    order: 6
+    
+category_4:
+    id: 4
+    parent_id: 
+    description: "Sports"
+    title: "Sports"
+    url: "sports"
+    order: 8
+    
+category_5:
+    id: 5
+    parent_id: 
+    description: "Travel"
+    title: "Travel and Visa"
+    url: "travel"
+    order: 5
+    
+category_6:
+    id: 6
+    parent_id: 
+    description: "Accommodation"
+    title: "Flats and Houses"
+    url: "accommodation"
+    order: 1
+    
+category_7:
+    id: 7
+    parent_id: 
+    description: "Social"
+    title: "Social"
+    url: "social"
+    order: 3
+    
+category_8:
+    id: 8
+    parent_id: 
+    description: "Sales"
+    title: "Sales"
+    url: "sales"
+    order: 7

@@ -1,0 +1,18 @@
+<p>
+  <b>Category:</b>
+  <%=h @custom_page.category_id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @custom_page.title %>
+</p>
+
+<p>
+  <b>Sub title:</b>
+  <%=h @custom_page.sub_title %>
+</p>
+
+
+<%= link_to 'Edit', edit_custom_page_path(@custom_page) %> |
+<%= link_to 'Back', custom_pages_path %>

@@ -1,0 +1,44 @@
+<h1>Listing images</h1>
+
+<table>
+  <tr>
+	<th>Image</th>
+    <th>Category</th>
+    <th>Description</th>
+    <th>Link type</th>
+    <th>Link</th>
+    <th>Caption</th>
+    <th>Parent</th>
+    <th>Size</th>
+    <th>Width</th>
+    <th>Height</th>
+    <th>Content type</th>
+    <th>Filename</th>
+    <th>Thumbnail</th>
+  </tr>
+
+<% @images.each do |image| %>
+  <tr>
+	<td><img src="<%= image.public_filename() %>" width="<%= image.width %>" height="<%= image.height %>"/></td>
+    <td><%=h image.category_id %></td>
+    <td><%=h image.description %></td>
+    <td><%=h image.link_type_id %></td>
+    <td><%=h image.link %></td>
+    <td><%=h image.caption %></td>
+    <td><%=h image.parent_id %></td>
+    <td><%=h image.size %></td>
+    <td><%=h image.width %></td>
+    <td><%=h image.height %></td>
+    <td><%=h image.content_type %></td>
+    <td><%=h image.filename %></td>
+    <td><%=h image.thumbnail %></td>
+    <td><%= link_to 'Show', image %></td>
+    <td><%= link_to 'Edit', edit_image_path(image) %></td>
+    <td><%= link_to 'Destroy', image, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New image', new_image_path %>

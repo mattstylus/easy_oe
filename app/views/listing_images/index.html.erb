@@ -1,0 +1,24 @@
+<h1>Listing listing_images</h1>
+
+<table>
+  <tr>
+    <th>Listing</th>
+    <th>Image</th>
+    <th>Enabled</th>
+  </tr>
+
+<% @listing_images.each do |listing_image| %>
+  <tr>
+    <td><%=h listing_image.listing_id %></td>
+    <td><%=h listing_image.image_id %></td>
+    <td><%=h listing_image.enabled %></td>
+    <td><%= link_to 'Show', listing_image %></td>
+    <td><%= link_to 'Edit', edit_listing_image_path(listing_image) %></td>
+    <td><%= link_to 'Destroy', listing_image, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New listing_image', new_listing_image_path %>

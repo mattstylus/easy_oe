@@ -1,0 +1,153 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+type_1:
+    id: 1
+    category_id: 1 
+    description: "Sports"
+    title: "Sports"
+    url: "sports"
+    order: 1
+    
+type_2:
+    id: 2
+    category_id: 1
+    description: "Club"
+    title: "Club"
+    url: "clubs"
+    order: 2
+
+type_3:
+    id: 3
+    category_id: 1
+    description: "Gig"
+    title: "Gig"
+    url: "gigs"
+    order: 3
+    
+type_4:
+    id: 4
+    category_id: 6
+    description: "Rent"
+    title: "Rent"
+    url: "rent"
+    order: 1
+    
+type_5:
+    id: 5
+    category_id: 6
+    description: "Share"
+    title: "Share"
+    url: "share"
+    order: 2
+    
+type_6:
+    id: 6
+    category_id: 6
+    description: "Sale"
+    title: "Sale"
+    url: "sale"
+    order: 3
+    
+type_7:
+    id: 7
+    category_id: 7
+    description: "Friends"
+    title: "Friends"
+    url: "friends"
+    order: 1
+    
+type_8:
+    id: 8
+    category_id: 7
+    description: "Dating"
+    title: "Dating"
+    url: "dating"
+    order: 2
+    
+type_9:
+    id: 9
+    category_id: 2
+    description: "Available"
+    title: available
+    url: "available"
+    order: 1
+    
+type_10:
+    id: 10
+    category_id: 2
+    description: "Wanted"
+    title: "Wanted"
+    url: "wanted"
+    order: 2
+    
+type_11:
+    id: 11
+    category_id: 3
+    description: "Tax"
+    title: "Tax"
+    url: "tax"
+    order: 1
+    
+type_12:
+    id: 12
+    category_id: 3
+    description: "Money"
+    title: "Money"
+    url: "money"
+    order: 2
+    
+type_13:
+    id: 13
+    category_id: 3
+    description: "Contracting"
+    title: "Contracting"
+    url: "Contracting"
+    order: 3
+    
+type_14:
+    id: 14
+    category_id: 5
+    description: "Travel"
+    title: "Travel"
+    url: "home"
+    order: 1
+    
+type_15:
+    id: 15
+    category_id: 5
+    description: "Visa"
+    title: "Visa"
+    url: "visa"
+    order: 2
+    
+type_16:
+    id: 16
+    category_id: 8
+    description: "For Sale"
+    title: "For Sale"
+    url: "for_sale"
+    order: 1
+    
+type_17:
+    id: 17
+    category_id: 8
+    description: "Wanted"
+    title: "Wanted"
+    url: "wanted"
+    order: 2
+    
+type_18:
+    id: 18
+    category_id: 4
+    description: "Leagues"
+    title: "Leagues"
+    url: "leagues"
+    order: 1
+    
+type_19:
+    id: 19
+    category_id: 4
+    description: "Other"
+    title: "Other"
+    url: "other"
+    order: 2

@@ -1,0 +1,34 @@
+<h1>Listing sub_pages</h1>
+
+<table>
+  <tr>
+    <th>Page</th>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Order</th>
+    <th>Location title</th>
+    <th>Location city</th>
+    <th>Location area</th>
+    <th>Location postcode</th>
+  </tr>
+
+<% @sub_pages.each do |sub_page| %>
+  <tr>
+    <td><%=h sub_page.page_id %></td>
+    <td><%=h sub_page.title %></td>
+    <td><%=h sub_page.content %></td>
+    <td><%=h sub_page.order %></td>
+    <td><%=h sub_page.location_title %></td>
+    <td><%=h sub_page.location_city %></td>
+    <td><%=h sub_page.location_area %></td>
+    <td><%=h sub_page.location_postcode %></td>
+    <td><%= link_to 'Show', sub_page %></td>
+    <td><%= link_to 'Edit', edit_sub_page_path(sub_page) %></td>
+    <td><%= link_to 'Destroy', sub_page, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New sub_page', new_sub_page_path %>

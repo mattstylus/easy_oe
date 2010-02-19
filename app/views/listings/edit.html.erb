@@ -1,0 +1,68 @@
+<h1>Editing listing</h1>
+
+<% form_for(@listing) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :category_id %><br />
+    <%= f.text_field :category_id %>
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :sub_title %><br />
+    <%= f.text_field :sub_title %>
+  </p>
+  <p>
+    <%= f.label :location_city %><br />
+    <%= f.text_field :location_city %>
+  </p>
+  <p>
+    <%= f.label :location_area %><br />
+    <%= f.text_field :location_area %>
+  </p>
+  <p>
+    <%= f.label :location_postcode %><br />
+    <%= f.text_field :location_postcode %>
+  </p>
+  <p>
+    <%= f.label :event_date %><br />
+    <%= f.datetime_select :event_date %>
+  </p>
+  <p>
+    <%= f.label :type_id %><br />
+    <%= f.text_field :type_id %>
+  </p>
+  <p>
+    <%= f.label :contact_email_address %><br />
+    <%= f.text_field :contact_email_address %>
+  </p>
+  <p>
+    <%= f.label :contact_name %><br />
+    <%= f.text_field :contact_name %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </p>
+  <p>
+    <%= f.label :reference %><br />
+    <%= f.text_field :reference %>
+  </p>
+  <p>
+    <%= f.label :contact_number %><br />
+    <%= f.text_field :contact_number %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @listing %> |
+<%= link_to 'Back', listings_path %>
