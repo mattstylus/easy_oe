@@ -2,7 +2,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :listing_images
 
   map.resources :listings
-
+  
+  map.resources 'newimage', :controller => 'images', :action => 'new'
+  
   map.resources :images
 
   map.resources :link_types
